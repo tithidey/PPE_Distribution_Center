@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Distribution Center</title>
+            <!-- <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'> -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+            <link rel="stylesheet" href="../public/css/style.css">
+          <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+          <script src="../node_modules/web3/dist/web3.min.js"></script>  
+        <script src="index.js"></script>
+    </head>
+    <body>
+      <img src="../public/img/blockchain-logo.jpg" width="300px" style="margin-top: -3rem;">
+      <h3 style="margin-top: -2rem; color: gray;">Blockchain Based -PPE Distribution Network</h3>
+      <hr/>
+      <br/>
+        <div class="container">
+
+          <div class="card" style="margin-top: 3rem;">
+            <div class="card-body">
+                <p>Hello, <%=name%><p>
+                <a href="/logout" class="btn btn-danger">Logout</a>
+              </div>
+            </div>
+            <div id="content">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Name of Authorized Center</th>
+                      <th scope="col">PPE Sent</th>
+                    </tr>
+                  </thead>
+                  <tbody id="distributionResults">
+                  
+            </table>
+            <hr/>
+        <form>
+            
+            <div class="form-group">
+                <label for="centerSelect">Select Center</label>
+                <select class="form-control" id="centerSelects">
+                </select>
+                <label for="amountSelects">Enter Amount</label>
+                <input class="form-control" id= "amountSelects" type = number placeholder="Not less than 100">
+                <a href="#" onclick="sendTransactions()" class="btn btn-success">---Send---</a>
+
+                <br/> <br>
+                <hr>
+
+                <p id="accountAddress" class="text-center">Your account: </p>
+        </form>
+        <hr/>
+        <hr/>
+        </div>
+        </div>   
+    </body>
+</html>

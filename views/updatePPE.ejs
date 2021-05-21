@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+        <title>Registration</title>
+            <!-- <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'> -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+            <link rel="stylesheet" href="../public/css/style.css">
+         
+    </head>
+    <body> 
+      <img src="../public/img/blockchain-logo.jpg" width="300px" style="margin-top: -3rem;">
+      <h3 style="margin-top: -2rem;">Blockchain Based -PPE Distribution Network</h3>
+      <br/>
+        <div class="container">
+          <div class="con1">
+          <div class="regDiv">
+            <h2 class="text-center">Register</h2>
+            
+           <form action="/register" method="POST" novalidate>
+                  <div class="form-group">
+                    <label for="_rname">Name</label>
+                    <input type="text" name="name" id="_rname" class="form-control" placeholder="Name" value="<%= (locals.old_data) ? old_data.name : ''; %>" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="_remail">Email</label>
+                    <input type="email" name="email" id="_remail" class="form-control" placeholder="Email" value="<%= (locals.old_data) ? old_data.email : ''; %>" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="_rpass">Password</label>
+                    <input type="password" name="password" id="_rpass" class="form-control" placeholder="Password" required>
+                  </div>
+                  <% if (locals.register_error) { 
+                    register_error.forEach(function(error_msg){ %>
+                    <div class="alert alert-danger" role="alert"><%= error_msg %></div>
+                  <% });
+                  } %>
+                  <button type="submit" class="btn btn-info" style="margin-left: 10rem;">Sign Up</button>
+              </form>
+
+          </div>
+          </div>
+          </div>
+          
+        </div>   
+    </body>
+</html>

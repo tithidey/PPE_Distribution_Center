@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Authorized Center</title>
+            <!-- <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'> -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+            <link rel="stylesheet" href="../public/css/style.css">
+          <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+          <script src="../node_modules/web3/dist/web3.min.js"></script>  
+        <script src="../public/js/hospital.js"></script>
+    </head>
+    <body>
+      <img src="../public/img/blockchain-logo.jpg" width="300px" style="margin-top: -3rem;">
+      <h3 style="margin-top: -2rem; color: gray;">Blockchain Based -PPE Distribution Network</h3>
+      <hr/> 
+      
+      <div class="container">
+        <div class="card"  style="margin-top: 4rem;">
+          <div class="card-body">
+              <p>Authorized Hospital<p>
+              <a href="/logout" class="btn btn-danger">Logout</a>
+            </div>
+          </div>
+        
+          <h5>Your Account!</h5>
+          <hr/>
+          <br/>
+            <div id="content">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Your ID</th>
+                      <th scope="col">Your Center</th>
+                      <th scope="col">Accepted PPE</th>
+                    </tr>
+                  </thead>
+                  <tbody id="distributionResults1">
+                  </tbody>
+                </table>
+                <hr/>
+                <form>
+            
+                    <div class="form-group">
+                        <label for="idSelect">Unique Id</label>
+                        <input class="form-control" id="idSelect">
+                        </input>
+      
+                        <label for="key">Account Address </label>
+                        <input class="form-control" id="key">
+                          </input>
+                        
+                        <label for="amountSelects">Enter Amount</label>
+                        <input class="form-control" id= "amountSelects" type = number placeholder="Not less than 100">
+                        <a href="#" onclick="withdrawAmount()" class="btn btn-success">withdraw</a>
+        
+                        <br/> <br>
+                        <hr>
+        
+                        <p id="accountAddress" class="text-center">Your account: </p>
+                </form>
+      
+        </div>
+          
+      </div> 
+    </body>
+</html>

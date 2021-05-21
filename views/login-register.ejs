@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login Or Register</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../public/css/style.css">
+      <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+      <script src="../node_modules/web3/dist/web3.min.js"></script>  
+      <script src="../public/js/publicView.js"></script>
+
+    </head>
+  <body>
+    <img src="../public/img/blockchain-logo.jpg" style="width: 300px; margin-top: -3rem;">
+      <div class="container p-5">
+        <h1 class="text-center mb-5 text-uppercase text-muted" style="margin-top: -5rem; margin-left: 2rem;">Blockchain Based-PPE Distribution Network</h1>
+        <!-- <a href="/view" class="btn btn-warning" style="margin-left: 28rem;">Public View</a>  -->
+        <div class="combo">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name of Authorized Center</th>
+                <th scope="col">Balance of PPE</th>
+              </tr>
+            </thead>
+            <tbody id="distributionResults">
+            </tbody>
+            <tbody id="distributionResult">
+          </tbody>
+          <tbody id="distributionResults1">
+          </tbody>
+          <tbody id="distributionResults2">
+          </tbody>
+          
+      </table>
+      <hr/>
+      </div>
+      <div class="loginDiv">
+        <h2 class="text-center">Login</h2>
+        <form action="" method="POST">
+          <div class="form-group">
+             <label for="_email">Email</label>
+                <input type="text" name="email" id="_email" style="background-color: wheat;" class="form-control" rnodeequired>
+           </div>
+           <div class="form-group">
+               <label for="_pass">Password</label>
+                   <input type="password" name="password" id="_pass" style="background-color: wheat;" class="form-control" required>
+           </div>
+           <% if (locals.login_errors) { 
+             login_errors.forEach(function(error_msg){ %>
+             <div class="alert alert-danger" role="alert"><%= error_msg %></div>
+           <% });
+           } %>
+           <button type="submit" class="btn btn-info" style="margin-left: 3rem;">Login</button>
+           <a href="/view" class="btn btn-danger">Don't have account?</a>
+          </form> 
+      </div>
+      </div>
+      <!-- <div class="regDiv">
+        <h2 class="text-center">Register</h2>
+
+        <form action="/register" method="POST" novalidate>
+                <div class="form-group">
+                  <label for="_rname">Name</label>
+                  <input type="text" name="name" id="_rname" class="form-control" placeholder="Name" value="<%= (locals.old_data) ? old_data.name : ''; %>" required>
+                </div>
+                <div class="form-group">
+                  <label for="_remail">Email</label>
+                  <input type="email" name="email" id="_remail" class="form-control" placeholder="Email" value="<%= (locals.old_data) ? old_data.email : ''; %>" required>
+                </div>
+                <div class="form-group">
+                  <label for="_rpass">Password</label>
+                  <input type="password" name="password" id="_rpass" class="form-control" placeholder="Password" required>
+                </div>
+                <% if (locals.register_error) { 
+                  register_error.forEach(function(error_msg){ %>
+                  <div class="alert alert-danger" role="alert"><%= error_msg %></div>
+                <% });
+                } %>
+                <button type="submit" class="btn btn-success">Sign Up</button>
+            </form>
+
+      </div>
+        <div class="row">
+          <div class = "col-sm-5 bg-light border rounded py-3">
+            <h2 class="text-center">Login</h2>
+
+             <form action="" method="POST">
+               <div class="form-group">
+                  <label for="_email">Email</label>
+                     <input type="text" name="email" id="_email" class="form-control" rnodeequired>
+                </div>
+                <div class="form-group">
+                    <label for="_pass">Password</label>
+                        <input type="password" name="password" id="_pass" class="form-control" required>
+                </div>
+                <% if (locals.login_errors) { 
+                  login_errors.forEach(function(error_msg){ %>
+                  <div class="alert alert-danger" role="alert"><%= error_msg %></div>
+                <% });
+                } %>
+                <button type="submit" class="btn btn-success">Login</button>
+             </form> 
+          </div>
+          <div class="col-sm-6 bg-light rounded border py-3 offset-sm-1">
+              <h2 class="text-center">Register</h2>
+
+            <form action="/register" method="POST" novalidate>
+                    <div class="form-group">
+                      <label for="_rname">Name</label>
+                      <input type="text" name="name" id="_rname" class="form-control" placeholder="Name" value="<%= (locals.old_data) ? old_data.name : ''; %>" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="_remail">Email</label>
+                      <input type="email" name="email" id="_remail" class="form-control" placeholder="Email" value="<%= (locals.old_data) ? old_data.email : ''; %>" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="_rpass">Password</label>
+                      <input type="password" name="password" id="_rpass" class="form-control" placeholder="Password" required>
+                    </div>
+                    <% if (locals.register_error) { 
+                      register_error.forEach(function(error_msg){ %>
+                      <div class="alert alert-danger" role="alert"><%= error_msg %></div>
+                    <% });
+                    } %>
+                    <button type="submit" class="btn btn-success">Sign Up</button>
+                </form>
+
+        </div> -->
+      </div>
+  </body>
+</html>
